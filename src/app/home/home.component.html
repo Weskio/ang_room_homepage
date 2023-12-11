@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="md:flex h-[70vh] w-full relative">
+      <!-- desktop navbar -->
+      <div
+        class="navbar md:visible invisible flex absolute md:-left-8 md:p-12 lg:left-12"
+      >
+        <img
+          src="../../assets/images/logo.svg"
+          class="w-16 h-4 md:w-28 sm:h-6 cursor-pointer"
+        />
+        <ul
+          class="grid grid-cols-4 invisible md:visible text-white gap-6 ml-12"
+        >
+          <li class="group cursor-pointer">
+            <p>home</p>
+            <p class="-mt-8 ml-2 text-3xl invisible group-hover:visible">__</p>
+          </li>
+          <li class="group cursor-pointer">
+            <p>shop</p>
+            <p class="-mt-8 ml-1 text-3xl invisible group-hover:visible">__</p>
+          </li>
+          <li class="group cursor-pointer">
+            <p>about</p>
+            <p class="-mt-8 ml-2 text-3xl invisible group-hover:visible">__</p>
+          </li>
+          <li class="group cursor-pointer">
+            <p>contact</p>
+            <p class="-mt-8 ml-3 text-3xl invisible group-hover:visible">__</p>
+          </li>
+        </ul>
+      </div>
+
+      <!-- mobile navbar -->
+      <div class="md:invisible mob-navbar absolute flex z-10 p-10">
+        <img
+          src="../../assets/images/icon-hamburger.svg"
+          (click)="toggleMenu()"
+          alt="Open Menu"
+          class="w-8 h-4 mr-36 cursor-pointer"
+        />
+        <img src="../../assets/images/logo.svg" class="" />
+      </div>
+      <div
+      [ngClass]="{'block': isMenuOpen, 'hidden': !isMenuOpen}"
+        class="dropdown-menu z-20 absolute h-32 w-full flex bg-white"
+      >
+        <img
+          src="../../assets/images/icon-close.svg"
+          class="w-5 h-5 ml-[6vw] mt-auto mb-auto"
+        />
+        <ul
+          class="grid grid-cols-4 gap-6 ml-auto mr-6 mt-auto mb-auto font-bold"
+        >
+          <li class="group cursor-pointer">
+            <p>home</p>
+            <p class="-mt-8 ml-2 text-3xl invisible group-hover:visible">__</p>
+          </li>
+          <li class="group cursor-pointer">
+            <p>shop</p>
+            <p class="-mt-8 ml-1 text-3xl invisible group-hover:visible">__</p>
+          </li>
+          <li class="group cursor-pointer">
+            <p>about</p>
+            <p class="-mt-8 ml-2 text-3xl invisible group-hover:visible">__</p>
+          </li>
+          <li class="group cursor-pointer">
+            <p>contact</p>
+            <p class="-mt-8 ml-3 text-3xl invisible group-hover:visible">__</p>
+          </li>
+        </ul>
+      </div>
+
+      <img
+        src="../../assets/images/desktop-image-hero-1.jpg"
+        class="md:visible invisible w-[60vw] object-fill"
+      />
+      <img
+        src="../../assets/images/mobile-image-hero-1.jpg"
+        class="md:invisible h-[56.3vh] sm:h-[77vh] absolute top-0 w-full"
+      />
+      <div class="slider max-w-[40vw]">
+        <div
+          class="slider-text sm:mt-12 h-96 sm:h-80 bg-white md:top-0 absolute top-[60vh] p-12 md:p-12 xl:20 lg:p-16 3xl:p-28"
+        >
+          <h1
+            class="3xl:text-5xl text-4xl sm:text-2xl lg:text-4xl font-bold mb-3"
+          >
+            Discover innovative ways to decorate
+          </h1>
+          <p class="text-slate-400 mb-5 3xl:leading-9">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi ut
+            aspernatur reprehenderit porro a omnis velit id est! Quaerat
+            necessitatibus eius voluptatibus. Illo veritatis in hic tempore
+            excepturi debitis quos sed cum voluptatem explicabo totam ut quas,
+            minus voluptate pariatur, officiis officia corrupti. Hic modi
+            explicabo tenetur aliquid sit fugiat.
+          </p>
+
+          <div class="shop flex mt-2">
+            <p
+              class="uppercase mr-4 md:tracking-widest lg:tracking-[0.7rem] font-semibold cursor-pointer hover:text-gray-500"
+            >
+              shop now
+            </p>
+            <img
+              src="../../assets/images/icon-arrow.svg"
+              class="h-5 cursor-pointer"
+            />
+          </div>
+        </div>
+
+        <div
+          class="slider-buttons top-[49.3vh] sm:top-[57.4vh] left-[78.7vw] md:left-[43vw] md:top-[58vh] flex lg:left-[59.3vw] lg:top-[58.2vh] absolute"
+        >
+          <img
+            src="../../assets/images/icon-angle-left.svg"
+            class="bg-black p-4 sm:p-6 md:p-8 hover:bg-gray-800 cursor-pointer"
+          />
+          <img
+            src="../../assets/images/icon-angle-right.svg"
+            class="bg-black p-4 sm:p-6 md:p-8 hover:bg-gray-800 cursor-pointer"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="h-[30vh] md:grid grid-cols-3 gap-0">
+      <img
+        src="../../assets/images/image-about-dark.jpg"
+        class="mt-[34vh] sm:mt-48 w-full md:mt-0 md:w-[30vw] md:h-[30vh]"
+      />
+      <div
+        class="p-14 md:w-[40vw] md:mt-0 md:p-6 lg:p-10 lg:pr-36 items-center"
+      >
+        <p class="text-xl uppercase tracking-widest font-bold mb-2">
+          about our furniture
+        </p>
+        <p class="text-slate-400">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum quas
+          nemo qui minus consectetur, amet iusto soluta natus similique
+          repudiandae doloribus veritatis nulla sint officiis quo assumenda
+          harum eaque atque. Quos asperiores accusantium commodi.
+        </p>
+      </div>
+      <img
+        src="../../assets/images/image-about-light.jpg"
+        class="w-full md:mt-0 md:ml-[54px] md:w-[29.4vw] md:h-[30vh]"
+      />
+    </div>
+  </body>
+</html>
